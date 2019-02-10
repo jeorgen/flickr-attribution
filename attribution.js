@@ -9,6 +9,8 @@ function get(url) {
     result.author = "author here"
     result.license = ""
     result.source = ""
+    result.title = "Title goes here"
+
     return P.resolve(result)
   }
   const options = {
@@ -23,6 +25,7 @@ function get(url) {
     result.author = $('.attribution-info>.owner-name').text()
     result.license = $('.photo-license-url').attr('href')
     result.source = url
+    result.title = $('title').text()
     return result
   })
 
